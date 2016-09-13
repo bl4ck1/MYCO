@@ -16,33 +16,9 @@ namespace MakeYourChampionOP
         }
 
         public static Menu Config;
-        public static Spell Q, W, E, R;
-
-        private static void AzirSpells()
-        {
-            Q = new Spell(SpellSlot.Q, 825);
-            W = new Spell(SpellSlot.W, 450);
-        }
-
-        private static void GravesSpells()
-        {
-            E = new Spell(SpellSlot.E, 425f);
-        }
 
         private static void OnLoad(EventArgs args)
         {
-            switch (ObjectManager.Player.ChampionName)
-            {
-                case "Azir":
-                    AzirSpells();
-                    break;
-                case "Graves":
-                    GravesSpells();
-                    break;
-            }
-
-
-
             Config = new Menu("MAKE YOUR CHAMPION OP","MAKE YOUR CHAMPION OP",true);
             {
                 Config.AddItem(new MenuItem("inject", "Inject ?")).SetValue(false);
