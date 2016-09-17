@@ -42,7 +42,7 @@ namespace MakeYourChampionOP
                 return;
             }
 
-            if (ObjectManager.Player.ChampionName == "Graves" && args.SData.Name.ToLower().Contains("attack")
+            if (ObjectManager.Player.ChampionName == "Lucian" && args.SData.Name.ToLower().Contains("attack")
                 && Config.Item("inject").GetValue<bool>())
             {
                 ObjectManager.Player.Spellbook.CastSpell(SpellSlot.E, Game.CursorPos, true);
